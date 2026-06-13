@@ -1,0 +1,31 @@
+{{ define "main" }}
+<header class="mb-8">
+  <h1 class="text-4xl font-bold">{{ .Title }}</h1>
+  {{ with .Description }}
+  <p class="text-neutral-500 mt-2">{{ . }}</p>
+  {{ end }}
+</header>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {{ range .Pages }}
+  <a href="{{ .Permalink }}" class="block group rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700 hover:shadow-lg transition-shadow">
+    {{ with .Params.images }}
+    <div class="overflow-hidden h-48">
+      <img src="{{ index . 0 }}" loading="lazy" alt="{{ $.Title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+    </div>
+    {{ end }}
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">{{ .Title }}</h2>
+      {{ if not .Date.IsZero }}<time class="text-sm text-neutral-500">{{ .Date.Format "January 2006" }}</time>{{ end }}
+      {{ with .Params.tags }}
+      <div class="mt-2 flex flex-wrap gap-1">
+        {{ range . }}
+        <span class="text-xs bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

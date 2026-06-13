@@ -1,0 +1,9 @@
+baseURL = "https://takebakker.dev"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+[module]
+  [[module.imports]]
+    path = "github.com/nunocoracao/blowfish"

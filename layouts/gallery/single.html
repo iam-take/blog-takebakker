@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article>
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold">{{ .Title }}</h1>
+    {{ if .Date }}
+    <time class="text-neutral-500 text-sm">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div class="mt-2 flex flex-wrap gap-2">
+      {{ range . }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="text-xs bg-neutral-200 dark:bg-neutral-700 px-2 py-1 rounded">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  {{ if .Content }}
+  <div class="prose dark:prose-invert mb-8 max-w-none">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ with .Params.images }}
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+    {{ range . }}
+    <a href="{{ . | safeURL }}" data-glightbox class="block overflow-hidden rounded">
+      <img src="{{ . | safeURL }}" loading="lazy" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" alt="" />
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>GLightbox({ selector: '[data-glightbox]' });</script>
+{{ end }}
