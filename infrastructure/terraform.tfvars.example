@@ -1,0 +1,14 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is gitignored — never commit it.
+
+location             = "westeurope"
+resource_group_name  = "rg-blog-takebakker"
+static_web_app_name  = "swa-blog-takebakker"
+storage_account_name = "stblogtakebakker" # must be globally unique
+subscription_id      = "3bed492e-70b9-4918-87ce-4afcd1df23d7"
+
+tags = {
+  environment = "production"
+  managed_by  = "terraform"
+  project     = "blog-takebakker"
+}
