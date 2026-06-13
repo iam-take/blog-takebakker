@@ -41,7 +41,3 @@ showLikes = false
   showTermCount = true
   showHero = false
 
-[author]
-  name = "Take Bakker"
-  bio = "Solution architect · Azure · Drenthe"
-  links = []

@@ -5,3 +5,14 @@ title = "takebakker.dev"
 [params]
   displayName = "EN"
   isoCode = "en"
+  description = "Azure, IT, and photography — Take Bakker"
+
+[params.author]
+  name = "Take Bakker"
+  headline = "Solution Architect · Azure · MSP"
+  bio = "18 years in IT. Writing about what works in practice — Azure, cloud architecture, and the occasional photo."
+  image = "img/avatar.jpg"
+  links = [
+    { linkedin = "https://www.linkedin.com/in/take-bakker/" },
+    { github = "https://github.com/iam-take" },
+  ]
