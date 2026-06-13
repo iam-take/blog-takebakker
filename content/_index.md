@@ -1,4 +1,4 @@
 ---
 title: "takebakker.dev"
-description: "IT insights and photography by [Your Name]"
+description: "Azure · IT · Photography — Take Bakker"
 ---

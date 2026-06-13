@@ -1,4 +1,4 @@
-colorScheme = "ocean"
+colorScheme = "noir"
 defaultAppearance = "dark"
 autoSwitchAppearance = false
 
@@ -15,11 +15,12 @@ showViews = false
 showLikes = false
 
 [homepage]
-  layout = "page"
+  layout = "background"
   showRecent = true
   showRecentItems = 3
   showMoreLink = true
   showMoreLinkDest = "/posts"
+  homepageImage = "img/hero.jpg"
 
 [article]
   showDate = true
@@ -40,5 +41,7 @@ showLikes = false
   showTermCount = true
   showHero = false
 
-[sitemap]
-  excludedKinds = []
+[author]
+  name = "Take Bakker"
+  bio = "Solution architect · Azure · Drenthe"
+  links = []
